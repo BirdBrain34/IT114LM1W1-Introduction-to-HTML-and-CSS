@@ -8,25 +8,48 @@
 <body>
     <h1>HTML Form Example</h1>
     <!-- TODO 2.1: Add the container for the form. It should POST to "/submit_form"  -->
-    
+    <form action="submit_form" method="POST"></form>
         <!-- TODO 2.2: Add a first name text field -->
-
+        <label for="firstname">Firstname: </label>
+        <input type="text" id="firstname" name="first_name"/>
         <!-- TODO 2.3: Add a last name text field. The field must be required. -->
-
+        <p><label for="lastname">Lastname: </label>
+        <input type="text" id="lastname" name="last_name" required/></p>
         <!-- TODO 2.4: Add an email text field. The field must be read only. -->
-
+        <p><label for="email">Email: </label>
+        <input type="text" id="email" name="email_add" readonly/></p>
         <!-- TODO 2.5: Add an address text field. The field must be disabled. -->
-
+        <p><label for="email">Address: </label>
+        <input type="text" id="address" name="address_input" disabled/></p>
         <!-- TODO 2.6: Add a year level dropdown. The inital selected value must be "Select an option", but it must not be a valid selection. -->
-
+        <p><label for="schoolYear"> Year level</label></p>
+        <select name="schoolYr" id="schoolYear" required>
+            <option value="selOp" selected disabled>Select an option</option>
+            <option value="1stYr">1styr</option>
+            <option value="2ndyr">2ndyr</option>
+            <option value="3rdYr">3rdyr</option>
+            <option value="4thYr">4thyr</option>
+        </select>
         <!-- TODO 2.7: Add radio buttons that ask which learning mode the user prefers -->
-
+        <p><label for="learnMode">Which learning mode do you prefer?</label></p>
+        <input type="radio" name="learnMode" id="online">
+        <label for="online">Online</label>
+        <input type="radio" name="learnMode" id="f2f">
+        <label for="f2f">Face to Face</label>
         <!-- TODO 2.8: Add check boxes that ask which subjects the user has taken -->
-       
+        <p><label for="subjTaken">Which subjects did you took?</label></p>
+        <input type="checkbox" name="IT100" id="IT100">
+        <label for="online">IT100</label>
+        <input type="checkbox" name="IT101" id="IT101">
+        <label for="online">IT100</label>
+        <input type="checkbox" name="IT102" id="IT102">
+        <label for="online">IT100</label>
         <!-- TODO 2.9: Add a text area that asks the user if they would prefer to be a cactus or a shark -->
-
+        <p><label for="pva">Would you prefer to be a cactus or a shark? why?</label></p>
+        <textarea name="cacVshark" id="pva" cols="30" rows="10"></textarea>
         <!-- TODO 2.10: Add a submit button -->
-
+        <p><input type="submit" value="Submit"/></p>
+        </form>
 </body>
 
 </html>
